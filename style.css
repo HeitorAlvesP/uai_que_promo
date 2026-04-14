@@ -6,14 +6,69 @@
 }
 
 body {
-    /* Gradiente usando as cores da empresa: Roxo (#7F56D9) e Verde (#10B981) */
-    /* Usei tons levemente mais escuros das cores originais para o fundo não ficar cansativo */
     background: linear-gradient(135deg, #2D1B4E 0%, #064E3B 100%);
-    background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
+    background-attachment: fixed;
     color: #ffffff;
     text-align: center;
-    padding: 60px 20px;
     min-height: 100vh;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 100px 20px; /* Aumentei o respiro entre as partes */
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- ESTILO DA PARTE 2 (O GRUPO) --- */
+.section-group {
+    /* Cor de fundo levemente mais escura e com o efeito de desfoque */
+    background: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.group-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #10B981; /* Destaque no verde */
+    text-transform: uppercase;
+}
+
+.group-content p {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Reutilizando seus estilos de QR e Botão com pequenos ajustes */
+.qr-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 20px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.2);
 }
 
 .brand-section {
@@ -127,4 +182,123 @@ h1 {
     transform: translateY(-3px);
     box-shadow: 0 15px 25px rgba(37, 211, 102, 0.4);
     filter: brightness(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+/* --- ESTILO DA PARTE 3 (TIKTOK CARROSSEL) --- */
+.section-tiktok {
+    width: 100%;
+    /* O fundo volta a ser transparente, herdando o gradiente principal do body */
+    background: transparent;
+}
+
+.tiktok-header {
+    margin-bottom: 40px;
+}
+
+.tiktok-header h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.tiktok-header h2 span {
+    color: #10B981; /* Destaque no verde da marca */
+}
+
+.tiktok-header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Container que faz a rolagem lateral (Carrossel) */
+.carousel-container {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* Faz os cards travarem no centro ao rolar no celular */
+    scroll-snap-type: x mandatory; 
+    
+    /* Esconde a barra de rolagem visualmente, mas mantém o scroll funcionando */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* O visual de cada caixa do TikTok */
+.tiktok-card {
+    flex: 0 0 280px; /* Largura fixa de cada card para forçar o carrossel */
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(127, 86, 217, 0.3); /* Borda roxa sutil */
+    border-radius: 20px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: center; /* Ponto de parada no scroll */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tiktok-card:hover {
+    transform: translateY(-10px); /* Dá um pulinho ao passar o mouse */
+    border-color: #7F56D9; /* Acende a borda */
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.tiktok-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #10B981; /* Círculo verde em volta da foto */
+    margin-bottom: 15px;
+    object-fit: cover;
+    background-color: #eee; /* Fundo temporário enquanto não tem imagem */
+}
+
+.tiktok-card h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.tiktok-card p {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    flex-grow: 1; /* Empurra o botão para baixo para alinhas as caixas */
+}
+
+/* Botão específico das contas do TikTok */
+.btn-tiktok {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #7F56D9; /* Roxo da marca */
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-tiktok:hover {
+    background-color: #7F56D9;
+    box-shadow: 0 5px 15px rgba(127, 86, 217, 0.4);
 }
