@@ -6,21 +6,197 @@
 }
 
 body {
-    background: linear-gradient(135deg, #2D1B4E 0%, #064E3B 100%);
-    background-attachment: fixed;
+    background: linear-gradient(
+        135deg, 
+        #7F56D9 0%,   
+        #6B4BBA 35%,  
+        #2A7C79 55%,  
+        #10B981 85%,  
+        #0D8A5E 100%  
+    );
+    animation: animateBackground 25s ease-in-out infinite;
     color: #ffffff;
-    text-align: center;
     min-height: 100vh;
     overflow-x: hidden;
 }
 
+@keyframes animateBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 section {
-    padding: 100px 20px; /* Aumentei o respiro entre as partes */
+    padding: 100px 20px; 
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* Remove a centralização forçada da seção de apresentação */
+section.section-presentation {
+    display: block; 
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.main-logo {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(127, 86, 217, 0.4);
+    margin-bottom: 15px;
+}
+
+.brand-section {
+    margin-bottom: 30px;
+}
+
+/* --- CONTAINER DE APRESENTAÇÃO --- */
+.presentation-container {
+    display: flex;
+    align-items: flex-start; /* CRAVA O ALINHAMENTO NO TOPO */
+    justify-content: flex-start; 
+    gap: 5%; 
+    width: 100%;
+    max-width: 100%; 
+    padding: 80px 5% 80px 2%; 
+    margin: 0;
+}
+
+.logo-side {
+    flex: 0 0 45%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.main-logo-hero {
+    width: 550px; 
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 30px rgba(127, 86, 217, 0.6));
+    animation: logo-glow 3s infinite alternate;
+}
+
+@keyframes logo-glow {
+    from { filter: drop-shadow(0 0 15px rgba(127, 86, 217, 0.4)); }
+    to { filter: drop-shadow(0 0 40px rgba(127, 86, 217, 0.8)); }
+}
+
+.glow-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 15px #D0A2FF,
+        0 0 30px #A05CFF,
+        0 0 50px #7F56D9,
+        0 0 80px #7F56D9;
+    letter-spacing: -2px;
+    white-space: nowrap;
+}
+
+.content-side {
+    flex: 0 0 50%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    padding-top: 0; 
+    margin-top: 30px; 
+}
+
+.headline {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px; 
+    color: #e0e0e0;
+}
+
+.hero-subtext {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 40px; 
+    max-width: 90%; 
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.features-list p {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+    margin: 0;
+}
+
+.features-list p span {
+    color: #FBBF24;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1200px) {
+    .main-logo-hero {
+        width: 400px; 
+    }
+}
+
+/* Ajuste Responsivo (Celular) */
+@media (max-width: 1024px) {
+    .presentation-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        gap: 50px;
+    }
+    
+    .content-side {
+        align-items: center;
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .hero-subtext {
+        max-width: 100%;
+    }
+
+    .features-list {
+        align-items: flex-start; 
+        text-align: left;
+    }
+
+    .glow-title {
+        font-size: 2.8rem;
+        white-space: normal;
+    }
+    
+    .headline {
+        font-size: 2.2rem;
+    }
 }
 
 /* --- ESTILO DA PARTE 2 (O GRUPO) --- */
@@ -71,37 +247,7 @@ section {
     box-shadow: 0 10px 30px rgba(37, 211, 102, 0.2);
 }
 
-.brand-section {
-    margin-bottom: 30px;
-}
 
-.main-logo {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-    /* Sombra que brilha com a cor da marca */
-    box-shadow: 0 0 30px rgba(127, 86, 217, 0.4);
-    margin-bottom: 15px;
-}
-
-h1 {
-    font-size: 3rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    /* Texto branco com sombra leve para destacar do fundo colorido */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.headline {
-    font-size: 2.5rem;
-    color: #ffffff;
-    font-weight: 800;
-    margin-bottom: 25px;
-    line-height: 1.1;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 /* Descrição mais elegante e limpa */
 .description {
