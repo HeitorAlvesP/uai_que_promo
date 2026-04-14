@@ -27,19 +27,20 @@ body {
 }
 
 section {
-    padding: 100px 20px; 
-    min-height: 80vh;
+    padding: 50px 20px; 
+    min-height: auto; /* Removemos a altura forçada para não gerar buracos */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Remove a centralização forçada da seção de apresentação */
+/* Removemos o 100vh para a apresentação abraçar o conteúdo */
 section.section-presentation {
     display: block; 
     padding: 0;
-    min-height: 100vh;
+    min-height: auto; 
+    padding-bottom: 20px; /* Quase sem margem embaixo para grudar com o Grupo */
 }
 
 h1 {
@@ -64,13 +65,25 @@ h1 {
 /* --- CONTAINER DE APRESENTAÇÃO --- */
 .presentation-container {
     display: flex;
-    align-items: flex-start; /* CRAVA O ALINHAMENTO NO TOPO */
+    align-items: flex-start;
     justify-content: flex-start; 
     gap: 5%; 
     width: 100%;
     max-width: 100%; 
-    padding: 80px 5% 80px 2%; 
+    /* O primeiro valor é o topo. Reduzimos de 60px para 15px */
+    padding: 15px 5% 20px 2%; 
     margin: 0;
+
+    position: relative;
+}
+
+.top-right-logo {
+    position: absolute;
+    top: 40px;   /* Distância do topo - Ajuste se quiser mais para cima ou para baixo */
+    right: 40px; /* Distância da direita - Ajuste se quiser mais para o lado */
+    width: 120px; /* Tamanho da logo - Ajuste conforme a necessidade do seu quadrado vermelho */
+    height: auto;
+    z-index: 10; /* Garante que ela fique por cima de tudo */
 }
 
 .logo-side {
@@ -81,11 +94,11 @@ h1 {
 }
 
 .main-logo-hero {
-    width: 550px; 
+    width: 750px; /* AUMENTADO de 550px para 650px */
     max-width: 100%;
     height: auto;
-    margin-bottom: 30px;
-    filter: drop-shadow(0 0 30px rgba(127, 86, 217, 0.6));
+    margin-bottom: 10px; /* Menos margem embaixo para o título subir um pouco */
+    filter: drop-shadow(0 0 35px rgba(127, 86, 217, 0.6));
     animation: logo-glow 3s infinite alternate;
 }
 
@@ -95,8 +108,11 @@ h1 {
 }
 
 .glow-title {
-    font-size: 3.5rem;
-    font-weight: 900;
+    /* padding-bottom: -50px; */
+    margin-top: 25px;
+    margin-bottom: -25px; 
+    font-size: 3.5rem; /* AUMENTADO de 3.5rem para 4.5rem */
+    font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
@@ -110,30 +126,65 @@ h1 {
     white-space: nowrap;
 }
 
+.glow-title-sub{
+    margin-bottom: 0px;
+    margin-top: 25px;
+    font-size: 3.0rem; /* AUMENTADO de 3.5rem para 4.5rem */
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 15px #D0A2FF,
+        0 0 30px #A05CFF,
+        0 0 50px #7F56D9,
+        0 0 80px #7F56D9;
+    letter-spacing: -2px;
+    white-space: nowrap; 
+}
+
+
 .content-side {
     flex: 0 0 50%; 
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
     text-align: left;
-    padding-top: 0; 
-    margin-top: 30px; 
+    
+    /* --- EFEITO GLASSMORPHISM (Cartão de Vidro) --- */
+    background: rgba(255, 255, 255, 0.05); /* Fundo branco bem transparente */
+    backdrop-filter: blur(15px); /* O efeito embaçado */
+    -webkit-backdrop-filter: blur(15px); /* Suporte para navegadores Safari */
+    
+    /* Acabamentos do cartão */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Linha de brilho sutil nas bordas */
+    border-radius: 24px; /* Cantos arredondados */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Sombra suave para descolar do fundo */
+    
+    /* Espaçamento interno (MUITO IMPORTANTE para não grudar o texto) */
+    padding: 40px 50px; 
+    margin-top: 10px; 
 }
 
 .headline {
-    font-size: 3rem;
+    font-size: 3.8rem; /* AUMENTADO de 3rem para 3.8rem */
     font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 25px; 
+    line-height: 1.1;
+    margin-bottom: 30px; 
     color: #e0e0e0;
 }
 
+.headline{
+
+}
+
 .hero-subtext {
-    font-size: 1.25rem;
-    line-height: 1.6;
+    font-size: 1.5rem; /* AUMENTADO de 1.25rem para 1.5rem */
+    line-height: 1.5;
     color: rgba(255, 255, 255, 0.85);
     margin-bottom: 40px; 
-    max-width: 90%; 
+    max-width: 95%; /* Espaço extra para o texto maior não quebrar feio */
 }
 
 .features-list {
@@ -143,19 +194,19 @@ h1 {
 }
 
 .features-list p {
-    font-size: 1.3rem;
+    font-size: 1.6rem; /* AUMENTADO de 1.3rem para 1.6rem */
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px; /* Aumentei o gap para afastar o check do texto maior */
     color: rgba(255, 255, 255, 0.95);
     font-weight: 500;
     margin: 0;
 }
 
 .features-list p span {
+    font-size: 2rem; /* Checkmark AUMENTADO de 1.6rem para 2rem */
     color: #FBBF24;
     font-weight: bold;
-    font-size: 1.6rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -165,7 +216,7 @@ h1 {
     }
 }
 
-/* Ajuste Responsivo (Celular) */
+
 @media (max-width: 1024px) {
     .presentation-container {
         flex-direction: column;
@@ -175,9 +226,8 @@ h1 {
     }
     
     .content-side {
-        align-items: center;
-        text-align: center;
-        padding-top: 0;
+        padding: 30px 20px; /* Reduz o espaçamento interno em telas pequenas */
+        width: 100%;
     }
 
     .hero-subtext {
