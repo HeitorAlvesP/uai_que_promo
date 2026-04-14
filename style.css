@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    /* Gradiente usando as cores da empresa: Roxo (#7F56D9) e Verde (#10B981) */
+    /* Usei tons levemente mais escuros das cores originais para o fundo não ficar cansativo */
+    background: linear-gradient(135deg, #2D1B4E 0%, #064E3B 100%);
+    background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+.brand-section {
+    margin-bottom: 30px;
+}
+
+.main-logo {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    /* Sombra que brilha com a cor da marca */
+    box-shadow: 0 0 30px rgba(127, 86, 217, 0.4);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* Texto branco com sombra leve para destacar do fundo colorido */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.headline {
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: 800;
+    margin-bottom: 25px;
+    line-height: 1.1;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Descrição mais elegante e limpa */
+.description {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    font-weight: 400;
+}
+
+/* Destaque sutil para o TikTok Shop */
+.description strong {
+    color: #10B981;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.intro-section {
+    max-width: 850px; /* Aumentei um pouco para o texto fluir melhor */
+    margin: 0 auto 50px auto;
+}
+
+.intro-section p {
+    font-size: 1.35rem; /* Texto levemente maior para facilitar a leitura */
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Destaque para o TikTok Shop e Promoções */
+.intro-section strong {
+    color: #10B981; /* O verde da sua logo */
+    border-bottom: 2px solid #7F56D9; /* Um detalhe roxo embaixo para dar estilo */
+}
+.action-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.qr-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Efeito de vidro esfumaçado */
+    padding: 20px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.qr-container img {
+    width: 150px;
+    border-radius: 12px;
+}
+
+.qr-container span {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 12px;
+    color: #10B981;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    padding: 18px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(37, 211, 102, 0.4);
+    filter: brightness(1.1);
+}
