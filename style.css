@@ -28,19 +28,18 @@ body {
 
 section {
     padding: 50px 20px; 
-    min-height: auto; /* Removemos a altura forçada para não gerar buracos */
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Removemos o 100vh para a apresentação abraçar o conteúdo */
 section.section-presentation {
     display: block; 
     padding: 0;
     min-height: auto; 
-    padding-bottom: 20px; /* Quase sem margem embaixo para grudar com o Grupo */
+    padding-bottom: 20px; 
 }
 
 h1 {
@@ -62,7 +61,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* --- CONTAINER DE APRESENTAÇÃO --- */
 .presentation-container {
     display: flex;
     align-items: flex-start;
@@ -70,7 +68,6 @@ h1 {
     gap: 5%; 
     width: 100%;
     max-width: 100%; 
-    /* O primeiro valor é o topo. Reduzimos de 60px para 15px */
     padding: 15px 5% 20px 2%; 
     margin: 0;
 
@@ -79,11 +76,11 @@ h1 {
 
 .top-right-logo {
     position: absolute;
-    top: 40px;   /* Distância do topo - Ajuste se quiser mais para cima ou para baixo */
-    right: 40px; /* Distância da direita - Ajuste se quiser mais para o lado */
-    width: 120px; /* Tamanho da logo - Ajuste conforme a necessidade do seu quadrado vermelho */
+    top: 40px;   
+    right: 40px; 
+    width: 120px;
     height: auto;
-    z-index: 10; /* Garante que ela fique por cima de tudo */
+    z-index: 10; 
 }
 
 .logo-side {
@@ -94,10 +91,10 @@ h1 {
 }
 
 .main-logo-hero {
-    width: 750px; /* AUMENTADO de 550px para 650px */
+    width: 750px;
     max-width: 100%;
     height: auto;
-    margin-bottom: 10px; /* Menos margem embaixo para o título subir um pouco */
+    margin-bottom: 10px; 
     filter: drop-shadow(0 0 35px rgba(127, 86, 217, 0.6));
     animation: logo-glow 3s infinite alternate;
 }
@@ -108,10 +105,9 @@ h1 {
 }
 
 .glow-title {
-    /* padding-bottom: -50px; */
     margin-top: 25px;
     margin-bottom: -25px; 
-    font-size: 3.5rem; /* AUMENTADO de 3.5rem para 4.5rem */
+    font-size: 3.5rem; 
     font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
@@ -129,7 +125,7 @@ h1 {
 .glow-title-sub{
     margin-bottom: 0px;
     margin-top: 25px;
-    font-size: 3.0rem; /* AUMENTADO de 3.5rem para 4.5rem */
+    font-size: 3.0rem; 
     font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
@@ -144,47 +140,36 @@ h1 {
     white-space: nowrap; 
 }
 
-
 .content-side {
     flex: 0 0 50%; 
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
     text-align: left;
-    
-    /* --- EFEITO GLASSMORPHISM (Cartão de Vidro) --- */
-    background: rgba(255, 255, 255, 0.05); /* Fundo branco bem transparente */
-    backdrop-filter: blur(15px); /* O efeito embaçado */
-    -webkit-backdrop-filter: blur(15px); /* Suporte para navegadores Safari */
-    
-    /* Acabamentos do cartão */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Linha de brilho sutil nas bordas */
-    border-radius: 24px; /* Cantos arredondados */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Sombra suave para descolar do fundo */
-    
-    /* Espaçamento interno (MUITO IMPORTANTE para não grudar o texto) */
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     padding: 40px 50px; 
     margin-top: 10px; 
 }
 
 .headline {
-    font-size: 3.8rem; /* AUMENTADO de 3rem para 3.8rem */
+    font-size: 3.8rem; 
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 30px; 
     color: #e0e0e0;
 }
 
-.headline{
-
-}
-
 .hero-subtext {
-    font-size: 1.5rem; /* AUMENTADO de 1.25rem para 1.5rem */
+    font-size: 1.5rem; 
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.85);
     margin-bottom: 40px; 
-    max-width: 95%; /* Espaço extra para o texto maior não quebrar feio */
+    max-width: 95%; 
 }
 
 .features-list {
@@ -194,17 +179,17 @@ h1 {
 }
 
 .features-list p {
-    font-size: 1.6rem; /* AUMENTADO de 1.3rem para 1.6rem */
+    font-size: 1.6rem; 
     display: flex;
     align-items: center;
-    gap: 15px; /* Aumentei o gap para afastar o check do texto maior */
+    gap: 15px; 
     color: rgba(255, 255, 255, 0.95);
     font-weight: 500;
     margin: 0;
 }
 
 .features-list p span {
-    font-size: 2rem; /* Checkmark AUMENTADO de 1.6rem para 2rem */
+    font-size: 2rem; 
     color: #FBBF24;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -224,162 +209,151 @@ h1 {
         padding: 40px 20px;
         gap: 50px;
     }
-    
     .content-side {
-        padding: 30px 20px; /* Reduz o espaçamento interno em telas pequenas */
+        padding: 30px 20px; 
         width: 100%;
     }
-
     .hero-subtext {
         max-width: 100%;
     }
-
     .features-list {
         align-items: flex-start; 
         text-align: left;
     }
-
     .glow-title {
         font-size: 2.8rem;
         white-space: normal;
     }
-    
     .headline {
         font-size: 2.2rem;
     }
 }
 
+
+
+
+
 /* --- ESTILO DA PARTE 2 (O GRUPO) --- */
 .section-group {
-    /* Cor de fundo levemente mais escura e com o efeito de desfoque */
-    background: rgba(0, 0, 0, 0.3); 
-    backdrop-filter: blur(15px); 
-    -webkit-backdrop-filter: blur(15px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    padding: 40px 2% 100px 2%; /* Encostado nas laterais e próximo do conteúdo superior */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.group-layout-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Força o alinhamento para a esquerda */
+    gap: 120px; /* Espaço generoso entre o bloco e o QR Code */
     width: 100%;
 }
 
-.group-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #10B981; /* Destaque no verde */
-    text-transform: uppercase;
+/* Bloco de Informações (Esquerda) */
+.group-info-card {
+    flex: 0 0 60%; /* Trava o bloco em 60% da largura da tela */
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    padding: 60px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    text-align: left;
 }
 
-.group-content p {
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-/* Reutilizando seus estilos de QR e Botão com pequenos ajustes */
-.qr-container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    display: inline-block;
-    margin-bottom: 30px;
-}
-
-.btn-whatsapp {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    padding: 20px 50px;
-    border-radius: 50px;
+/* --- BOTÃO VIP MODERNO --- */
+.btn-vip-modern {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 22px 50px;
+    /* Gradiente que usa as cores da sua identidade */
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.2);
-}
-
-
-
-/* Descrição mais elegante e limpa */
-.description {
-    font-size: 1.3rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 800px;
-    margin: 0 auto 50px auto;
-    font-weight: 400;
-}
-
-/* Destaque sutil para o TikTok Shop */
-.description strong {
-    color: #10B981;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 900;
+    border-radius: 20px;
     text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.4);
+}
+
+.btn-vip-modern:hover {
+    transform: translateY(-8px) scale(1.02);
+    /* No hover, o botão ganha o brilho roxo da marca */
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.6);
+    background: linear-gradient(135deg, #10B981 0%, #7F56D9 100%);
+}
+
+.btn-icon {
+    font-size: 1.8rem;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+}
+
+.urgency-label {
+    margin-top: 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
     letter-spacing: 1px;
 }
 
-.intro-section {
-    max-width: 850px; /* Aumentei um pouco para o texto fluir melhor */
-    margin: 0 auto 50px auto;
-}
-
-.intro-section p {
-    font-size: 1.35rem; /* Texto levemente maior para facilitar a leitura */
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.85);
-}
-
-/* Destaque para o TikTok Shop e Promoções */
-.intro-section strong {
-    color: #10B981; /* O verde da sua logo */
-    border-bottom: 2px solid #7F56D9; /* Um detalhe roxo embaixo para dar estilo */
-}
-.action-section {
+/* --- QR CODE (DIREITA E ISOLADO) --- */
+.qr-aside {
+    flex: 0 1 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 25px;
 }
 
-.qr-container {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px); /* Efeito de vidro esfumaçado */
-    padding: 20px;
-    border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+.qr-floating-frame {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 30px;
+    box-shadow: 0 0 45px rgba(127, 86, 217, 0.5); /* Brilho roxo pulsante */
+    transition: transform 0.5s ease;
 }
 
-.qr-container img {
-    width: 150px;
-    border-radius: 12px;
+.qr-floating-frame:hover {
+    transform: rotate(-3deg) scale(1.1);
 }
 
-.qr-container span {
+.qr-floating-frame img {
+    width: 200px; /* QR Code maior para facilitar o scan */
+    height: 200px;
     display: block;
-    font-size: 0.85rem;
-    margin-top: 12px;
-    color: #10B981;
-    font-weight: bold;
+}
+
+.qr-instruction {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #FBBF24; /* Amarelo para contraste */
     text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
 }
 
-.btn-whatsapp {
-    background-color: #25D366;
-    color: white;
-    padding: 18px 45px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+/* Ajuste Responsivo */
+@media (max-width: 1250px) {
+    .group-layout-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 60px;
+    }
+    .group-info-card {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+    }
+    .group-info-card h2, 
+    .group-info-card p {
+        text-align: center;
+    }
 }
-
-.btn-whatsapp:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px rgba(37, 211, 102, 0.4);
-    filter: brightness(1.1);
-}
-
 
 
 
