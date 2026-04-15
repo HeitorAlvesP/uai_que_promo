@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uai, Que Promo!</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap"
+        rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -25,51 +27,65 @@
 
     <style>
         body {
-            background: linear-gradient(135deg, #7F56D9 0%, #6B4BBA 35%, #2A7C79 55%, #10B981 85%, #0D8A5E 100%);
+            background: linear-gradient(135deg, #2b9895 10%, #4b77ba 30%, #664aad 50%, #7F56D9 85%, #21a39e 100%);
             background-size: 200% 200%;
             animation: animateBg 25s ease-in-out infinite;
             color: white;
             overflow-x: hidden;
         }
-        
+
         @keyframes animateBg {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .text-neon {
-            text-shadow: 0 0 5px rgba(255,255,255,0.5), 0 0 15px #D0A2FF, 0 0 30px #A05CFF, 0 0 50px #7F56D9, 0 0 80px #7F56D9;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 15px #D0A2FF, 0 0 30px #A05CFF, 0 0 50px #7F56D9, 0 0 80px #7F56D9;
         }
 
         .box-neon {
-            box-shadow: 0 0 5px rgba(255,255,255,0.5), 0 0 15px #D0A2FF, 0 0 30px #A05CFF, 0 0 50px #7F56D9, 0 0 80px #7F56D9;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 15px #D0A2FF, 0 0 30px #A05CFF, 0 0 50px #7F56D9, 0 0 80px #7F56D9;
         }
 
         .btn-vip {
             background: linear-gradient(135deg, #10B981 0%, #059669 100%);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        
+
         .btn-vip:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 20px 60px rgba(16, 185, 129, 0.6);
-            background: linear-gradient(135deg, #10B981 0%, #7F56D9 100%);
+            background: linear-gradient(135deg, #069f6c 0%, #7F56D9 100%);
         }
     </style>
 </head>
+
 <body class="antialiased min-h-screen flex flex-col items-center">
 
 
-    <section class="relative w-full max-w-screen-2xl mx-auto px-4 lg:px-12 pt-10 pb-20 flex flex-col lg:flex-row items-center justify-between gap-10">
-        
+    <section
+        class="relative w-full max-w-screen-2xl mx-auto px-4 lg:px-12 pt-10 pb-20 flex flex-col lg:flex-row items-center justify-between gap-10">
+
         <div class="flex flex-col items-center w-full lg:w-5/12">
-            <h1 class="text-neon text-5xl md:text-6xl font-bold uppercase tracking-tighter mb-[-10px] z-10">FAÇA PARTE</h1>
-            <img src="./img/img_principal.png" alt="Uai que promo logo" class="w-[500px] md:w-[650px] lg:w-[750px] max-w-full drop-shadow-[0_0_35px_rgba(127,86,217,0.6)]">
-            <h1 class="text-neon text-4xl md:text-5xl font-bold uppercase tracking-tighter mt-[-10px] z-10">ECONOMIZE MAIS!</h1>
+            <h1 class="text-neon text-5xl md:text-6xl font-bold uppercase tracking-tighter mb-[-10px] z-10">FAÇA PARTE
+            </h1>
+            <img src="./img/img_principal.png" alt="Uai que promo logo"
+                class="w-[500px] md:w-[650px] lg:w-[750px] max-w-full drop-shadow-[0_0_35px_rgba(127,86,217,0.6)]">
+            <h1 class="text-neon text-4xl md:text-5xl font-bold uppercase tracking-tighter mt-[-10px] z-10">ECONOMIZE
+                MAIS!</h1>
         </div>
 
-        <div class="flex flex-col items-start text-left w-full lg:w-1/2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[24px] shadow-2xl p-8 md:p-12">
+        <div
+            class="flex flex-col items-start text-left w-full lg:w-1/2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[24px] shadow-2xl p-8 md:p-12">
             <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-200 mb-8">
                 Pare de pagar caro! <br> Compre por menos!
             </h2>
@@ -78,32 +94,47 @@
                 entregamos apenas as oportunidades de ouro diretamente para você, antes que os estoques acabem.
             </p>
             <div class="flex flex-col gap-4 text-xl font-medium text-white/95">
-                <p class="flex items-center gap-4"><span class="text-brand-yellow text-3xl font-bold drop-shadow-md">✔</span> Seleção exclusiva das maiores ofertas do mercado.</p>
-                <p class="flex items-center gap-4"><span class="text-brand-yellow text-3xl font-bold drop-shadow-md">✔</span> Economia real, sem perder tempo procurando.</p>
-                <p class="flex items-center gap-4"><span class="text-brand-yellow text-3xl font-bold drop-shadow-md">✔</span> Acompanhe as tendências pelo TikTok.</p>
-                <p class="flex items-center gap-4"><span class="text-brand-yellow text-3xl font-bold drop-shadow-md">✔</span> Alertas de cupons relâmpago e preços baixos.</p>
-                <p class="flex items-center gap-4"><span class="text-brand-yellow text-3xl font-bold drop-shadow-md">✔</span> Acesso gratuito ao grupo VIP por tempo limitado.</p>
+                <p class="flex items-center gap-4"><span
+                        class="text-brand-yellow text-3xl font-bold drop-shadow-md">✔</span> Seleção exclusiva das
+                    maiores ofertas do mercado.</p>
+                <p class="flex items-center gap-4"><span
+                        class="text-brand-yellow text-3xl font-bold drop-shadow-md">✔</span> Economia real, sem perder
+                    tempo procurando.</p>
+                <p class="flex items-center gap-4"><span
+                        class="text-brand-yellow text-3xl font-bold drop-shadow-md">✔</span> Acompanhe as tendências
+                    pelo TikTok.</p>
+                <p class="flex items-center gap-4"><span
+                        class="text-brand-yellow text-3xl font-bold drop-shadow-md">✔</span> Alertas de cupons relâmpago
+                    e preços baixos.</p>
+                <p class="flex items-center gap-4"><span
+                        class="text-brand-yellow text-3xl font-bold drop-shadow-md">✔</span> Acesso gratuito ao grupo
+                    VIP por tempo limitado.</p>
             </div>
         </div>
-        
+
     </section>
 
 
-    <section class="w-full max-w-[1400px] mx-auto px-4 lg:px-12 py-10 mb-20 flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-16 lg:gap-24">
-        
-        <div class="flex-1 w-full bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-[40px] shadow-[0_25px_50px_rgba(0,0,0,0.3)] p-10 md:p-16 lg:p-20 lg:-ml-10 z-10">
+    <section
+        class="w-full max-w-[1400px] mx-auto px-4 lg:px-12 py-10 mb-20 flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-16 lg:gap-24">
+
+        <div
+            class="flex-1 w-full bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-[40px] shadow-[0_25px_50px_rgba(0,0,0,0.3)] p-10 md:p-16 lg:p-20 lg:-ml-10 z-10">
             <h2 class="text-neon text-3xl md:text-5xl font-bold text-left mb-8 leading-tight">
                 O SEGREDO DAS COMPRAS INTELIGENTES
             </h2>
             <p class="text-xl text-white/85 leading-relaxed text-left mb-12">
-                Os maiores cupons, erros de sistema e bugs de preço duram poucos minutos e não chegam a ir para o site. 
+                Os maiores cupons, erros de sistema e bugs de preço duram poucos minutos e não chegam a ir para o site.
                 <br><br>
-                <strong class="text-brand-green text-2xl font-extrabold">Eles vão direto para o celular de quem está no nosso Grupo VIP.</strong>
+                <strong class="text-brand-green text-2xl font-extrabold">Eles vão direto para o celular de quem está no
+                    nosso Grupo VIP.</strong>
                 <br><br>
-                Junte-se a milhares de pessoas que já pararam de pagar o preço cheio e começaram a economizar de verdade.
+                Junte-se a milhares de pessoas que já pararam de pagar o preço cheio e começaram a economizar de
+                verdade.
             </p>
-            
-            <a href="https://chat.whatsapp.com/HLW0BAzYPTr9mti3w6oRB9" class="btn-vip inline-flex items-center gap-4 px-10 py-5 rounded-2xl text-white text-xl font-black uppercase shadow-lg">
+
+            <a href="https://chat.whatsapp.com/HLW0BAzYPTr9mti3w6oRB9"
+                class="btn-vip inline-flex items-center gap-4 px-10 py-5 rounded-2xl text-white text-xl font-black uppercase shadow-lg">
                 <span>QUERO MEU ACESSO VIP</span>
                 <span class="text-3xl drop-shadow-md">🚀</span>
             </a>
@@ -111,15 +142,18 @@
         </div>
 
         <div class="flex flex-col items-center justify-center gap-6 flex-shrink-0 lg:mr-10">
-            <h3 class="text-4xl font-black text-white uppercase tracking-wide drop-shadow-[0_0_15px_rgba(127,86,217,0.8)] whitespace-nowrap">
+            <h3
+                class="text-4xl font-black text-white uppercase tracking-wide drop-shadow-[0_0_15px_rgba(127,86,217,0.8)] whitespace-nowrap">
                 ACESSO RÁPIDO
             </h3>
-            
-            <div class="bg-[#A05CFF] p-5 rounded-[30px] box-neon hover:scale-110 hover:-rotate-3 transition-transform duration-500 cursor-pointer">
+
+            <div
+                class="bg-white p-5 rounded-[30px] box-neon hover:scale-110 hover:-rotate-3 transition-transform duration-500 cursor-pointer">
                 <img src="./img/qrcode-exemplo.png" alt="Acesso VIP" class="w-56 h-56 block bg-white rounded-xl">
             </div>
-            
-            <span class="text-2xl font-extrabold text-brand-yellow uppercase mt-4 drop-shadow-[0_0_10px_rgba(251,191,36,0.4)]">
+
+            <span
+                class="text-2xl font-extrabold text-brand-yellow uppercase mt-4 drop-shadow-[0_0_10px_rgba(251,191,36,0.4)]">
                 📸 APONTE A CÂMERA
             </span>
         </div>
@@ -127,7 +161,7 @@
     </section>
 
     <section class="w-full py-20 flex flex-col items-center">
-        
+
         <div class="text-center mb-12 px-4">
             <h2 class="text-neon text-4xl md:text-5xl font-black uppercase tracking-tight">
                 Nossas Seleções no <span class="text-brand-green">TikTok Shop</span>
@@ -137,49 +171,67 @@
             </p>
         </div>
 
-        <div class="flex flex-nowrap lg:flex-wrap lg:justify-center gap-6 overflow-x-auto pb-10 px-6 w-full max-w-[1400px] scrollbar-hide snap-x">
-            
-            <div class="snap-center flex-shrink-0 w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-[30px] p-8 flex flex-col items-center text-center hover:border-brand-green/50 transition-all duration-300 group">
+        <div
+            class="flex flex-nowrap lg:flex-wrap lg:justify-center gap-6 overflow-x-auto pb-10 px-6 w-full max-w-[1400px] scrollbar-hide snap-x">
+
+            <div
+                class="snap-center flex-shrink-0 w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-[30px] p-8 flex flex-col items-center text-center hover:border-brand-green/50 transition-all duration-300 group">
                 <div class="relative mb-6">
-                    <img src="foto-perfil-1.png" alt="Perfil Eletrônicos" class="w-24 h-24 rounded-full border-4 border-brand-green p-1 object-cover">
+                    <img src="foto-perfil-1.png" alt="Perfil Eletrônicos"
+                        class="w-24 h-24 rounded-full border-4 border-brand-green p-1 object-cover">
                     <div class="absolute inset-0 rounded-full border border-brand-green animate-ping opacity-20"></div>
                 </div>
                 <h3 class="text-white text-xl font-bold mb-3 tracking-wide">@promo.eletronicos</h3>
                 <p class="text-white/60 text-sm leading-relaxed mb-6 flex-grow">
                     Os melhores gadgets e tecnologia com preços imperdíveis.
                 </p>
-                <a href="#" class="w-full py-3 rounded-full border-2 border-brand-green text-brand-green font-bold hover:bg-brand-green hover:text-white transition-all">Ver Perfil</a>
+                <a href="#"
+                    class="w-full py-3 rounded-full border-2 border-brand-green text-brand-green font-bold hover:bg-brand-green hover:text-white transition-all">Ver
+                    Perfil</a>
             </div>
 
-            <div class="snap-center flex-shrink-0 w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-[30px] p-8 flex flex-col items-center text-center hover:border-brand-green/50 transition-all duration-300">
-                <img src="foto-perfil-2.png" alt="Perfil Casa" class="w-24 h-24 rounded-full border-4 border-brand-green p-1 mb-6 object-cover">
+            <div
+                class="snap-center flex-shrink-0 w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-[30px] p-8 flex flex-col items-center text-center hover:border-brand-green/50 transition-all duration-300">
+                <img src="foto-perfil-2.png" alt="Perfil Casa"
+                    class="w-24 h-24 rounded-full border-4 border-brand-green p-1 mb-6 object-cover">
                 <h3 class="text-white text-xl font-bold mb-3 tracking-wide">@promo.casa</h3>
                 <p class="text-white/60 text-sm leading-relaxed mb-6 flex-grow">
                     Itens incríveis e práticos para facilitar o seu dia a dia no lar.
                 </p>
-                <a href="#" class="w-full py-3 rounded-full border-2 border-brand-green text-brand-green font-bold hover:bg-brand-green hover:text-white transition-all">Ver Perfil</a>
+                <a href="#"
+                    class="w-full py-3 rounded-full border-2 border-brand-green text-brand-green font-bold hover:bg-brand-green hover:text-white transition-all">Ver
+                    Perfil</a>
             </div>
 
-            <div class="snap-center flex-shrink-0 w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-[30px] p-8 flex flex-col items-center text-center hover:border-brand-green/50 transition-all duration-300">
-                <img src="foto-perfil-3.png" alt="Perfil Moda" class="w-24 h-24 rounded-full border-4 border-brand-green p-1 mb-6 object-cover">
+            <div
+                class="snap-center flex-shrink-0 w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-[30px] p-8 flex flex-col items-center text-center hover:border-brand-green/50 transition-all duration-300">
+                <img src="foto-perfil-3.png" alt="Perfil Moda"
+                    class="w-24 h-24 rounded-full border-4 border-brand-green p-1 mb-6 object-cover">
                 <h3 class="text-white text-xl font-bold mb-3 tracking-wide">@promo.moda</h3>
                 <p class="text-white/60 text-sm leading-relaxed mb-6 flex-grow">
                     Looks, acessórios e tendências de moda que estão bombando.
                 </p>
-                <a href="#" class="w-full py-3 rounded-full border-2 border-brand-green text-brand-green font-bold hover:bg-brand-green hover:text-white transition-all">Ver Perfil</a>
+                <a href="#"
+                    class="w-full py-3 rounded-full border-2 border-brand-green text-brand-green font-bold hover:bg-brand-green hover:text-white transition-all">Ver
+                    Perfil</a>
             </div>
 
-            <div class="snap-center flex-shrink-0 w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-[30px] p-8 flex flex-col items-center text-center hover:border-brand-green/50 transition-all duration-300">
-                <img src="foto-perfil-4.png" alt="Perfil Beleza" class="w-24 h-24 rounded-full border-4 border-brand-green p-1 mb-6 object-cover">
+            <div
+                class="snap-center flex-shrink-0 w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-[30px] p-8 flex flex-col items-center text-center hover:border-brand-green/50 transition-all duration-300">
+                <img src="foto-perfil-4.png" alt="Perfil Beleza"
+                    class="w-24 h-24 rounded-full border-4 border-brand-green p-1 mb-6 object-cover">
                 <h3 class="text-white text-xl font-bold mb-3 tracking-wide">@promo.beleza</h3>
                 <p class="text-white/60 text-sm leading-relaxed mb-6 flex-grow">
                     Skincare e maquiagens muito requisitadas com custo benefício.
                 </p>
-                <a href="#" class="w-full py-3 rounded-full border-2 border-brand-green text-brand-green font-bold hover:bg-brand-green hover:text-white transition-all">Ver Perfil</a>
+                <a href="#"
+                    class="w-full py-3 rounded-full border-2 border-brand-green text-brand-green font-bold hover:bg-brand-green hover:text-white transition-all">Ver
+                    Perfil</a>
             </div>
 
         </div>
     </section>
 
 </body>
+
 </html>
