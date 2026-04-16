@@ -32,17 +32,35 @@
         }
 
         body {
-            background: linear-gradient(135deg, #2b9895 10%, #4b77ba 30%, #664aad 50%, #7F56D9 85%, #21a39e 100%);
-            background-size: 200% 200%;
-
-            background-attachment: fixed;
-
-            animation: animateBg 25s ease-in-out infinite;
+            background-color: #2b9895;
             color: white;
             overflow-x: hidden;
         }
 
-        @keyframes animateBg {
+        /* 2. Criamos essa nova classe para a nossa camada de fundo */
+        body {
+            /* Gradiente estático com transição super suave e profissional */
+            background: linear-gradient(135deg,
+                    #7F56D9 0%,
+                    /* Roxo da marca no topo esquerdo */
+                    #5C50C2 35%,
+                    /* Transição para um tom anil/indigo */
+                    #2A8094 70%,
+                    /* Transição para um tom verde-água/ciano */
+                    #10B981 100%
+                    /* Verde da marca no canto inferior direito */
+                );
+
+            /* Isso garante que o fundo não repita e fique travado na tela */
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* @keyframes animateBg {
             0% {
                 background-position: 0% 50%;
             }
@@ -54,7 +72,7 @@
             100% {
                 background-position: 0% 50%;
             }
-        }
+        } */
 
         .text-neon {
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 15px #D0A2FF, 0 0 30px #A05CFF, 0 0 50px #7F56D9, 0 0 80px #7F56D9;
@@ -79,6 +97,7 @@
 
 <body class="antialiased min-h-screen flex flex-col items-center">
 
+    <!-- <div class="bg-animado"></div> -->
 
     <section
         class="relative w-full max-w-screen-2xl mx-auto px-4 lg:px-12 pt-10 pb-20 flex flex-col lg:flex-row items-center justify-between gap-10">
